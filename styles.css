@@ -1,6 +1,92 @@
 h1 {
-    color: rgb(234, 34, 127);
+  text-align: center;
+  color: rgb(255, 255, 255);
   }
-  h2 {
-    color: rgb(255, 200, 1);
+
+    .card {
+      width: 170px;
+      height: 100px;
+      background-color: #f35a85;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 24px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin: 6px;
+      transition: background-color 0.6s ease-in-out, transform 0.6s ease-in-out, box-shadow 0.6s ease-in-out;
   }
+  
+  .card:hover {
+      background-color: #fbde00;
+      transform: scale(1.1);
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  }
+
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.card-text {
+  position: absolute;
+  opacity: 0;  
+  transition: opacity 0s ease;  
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.card:hover .card-text {
+  opacity: 3;  
+}
+
+.card {
+  width: 250px;
+  height: 150px;
+  background-color: #f35a97; 
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative; 
+  overflow: hidden; 
+  border-radius: 10px;
+  transition: transform 0.3s ease; 
+}
+
+.main-text {
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.extra-text {
+  position: absolute;
+  bottom: -50px;  
+  opacity: 0;      
+  transition: opacity 0.5s ease, bottom 0.5s ease; 
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05); 
+}
+
+.card:hover .extra-text {
+  opacity: 1;          
+  bottom: 20px;        
+}
+
+body {
+  background-image: url(../../../Downloads/pexels-cottonbro-9669040.jpg);  
+  background-size: cover;         
+  background-position: center;    
+  background-repeat: no-repeat;   
+  margin: 0;                     
+  height: 100vh;                                    
+}
